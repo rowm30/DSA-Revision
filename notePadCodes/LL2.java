@@ -126,6 +126,16 @@ public class LL2 {
 		return newHead;
 	}
 
+	public Node middleNode(Node head){
+		Node slow = head, fast = head;
+
+		while(fast != null && fast.next != null){
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		return slow;
+	}
+
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -153,15 +163,16 @@ public class LL2 {
 			System.out.println("Bad input! Run the program again!");
 		}
 
-		System.out.println("Enter the node location which you want to delete:");
-		int k = sc.nextInt();
-		L2.delete(k, L2.head);
-		L2.display();
+		// System.out.println("Enter the node location which you want to delete:");
+		// int k = sc.nextInt();
+		// L2.delete(k, L2.head);
+		// L2.display();
 
 
 
-		L2.head = L2.reverseRecursive(L2.head);
-		L2.display();
+		// L2.head = L2.reverseRecursive(L2.head);
+
+		System.out.println(L2.middleNode(L2.head).data);
 
 	}
 
