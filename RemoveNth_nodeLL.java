@@ -106,6 +106,7 @@ public class RemoveNth_nodeLL {
             LL.addNode(temp);
         }
         int B = sc.nextInt();
+        
         LL.remClever(LL.head, B);
 
         LL.printLL();
