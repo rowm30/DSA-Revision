@@ -13,6 +13,7 @@ public class LL1 {
         }
 
     }
+    
 
     public Node head = null;
     public Node tail = null;
